@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #f8f9fb;
+  --color-secondary: #ffffff;
+  --color-accent: #9694fe;
+  --color-inner: #000000;
+  --color-border: #f0f5f7;
+  --color-muted: #9d9c9c;
+  --color-selected: #9d9c9c19;
+  --color-foreground: #6a7282;
+  --color-divider: #9d9c9c60;
+  --color-primary-background: #9694fe;
+  --color-primary-inner: #ffffff;
+  --color-default-background: #ffffff;
+  --color-default-inner: #000000;
+  --color-input-background: #f8f9fb;
+  --color-input-inner: #ffffff;
+  --color-calendar-border: #dadfe0;
+  --color-error: #ff4d4f;
+  --color-skeleton: rgba(0, 0, 0, 0.06);
+  --color-modal-background: #ffffff;
+  --color-modal-backdrop: #00000060;
+
+  --color-toggler-background: #ffffff;
+  --color-toggler-active: #f0f5f7;
+  --color-toggler-inner: #000000;
+
+  --color-mobilebar-background: rgba(255, 255, 255, 0.95);
+  --color-mobilebar-active: #f0f5f7;
+
+  --color-badge-background: #9694fe;
+  --color-badge-inner: #ffffff;
+
+  --background-gradient:
+    linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+    #f8f9fb;
+
+  --practice-item-border: #2ecc71;
+  --lecture-item-border: #9b59b6;
+  --lab-item-border: #3498db;
+
+  --practice-item-background: #2ecc711a;
+  --lecture-item-background: #9b59b61a;
+  --lab-item-background: #3498db1a;
+}
+
+[data-theme="dark"] {
+  --color-background: #141414;
+  --color-secondary: #1c1c1c;
+  --color-inner: #ffffff;
+  --color-muted: #9aa4b2;
+  --color-foreground: #c3ccd8;
+  --color-border: #2a2a2a;
+  --color-divider: #2a2a2a;
+  --color-selected: #2a2a2a4f;
+
+  --color-input-background: #191919;
+  --color-input-inner: #0b0f14;
+
+  --color-accent: #8b89ff;
+  --color-primary-background: #8b89ff;
+  --color-primary-inner: #0b0f14;
+
+  --color-default-background: #0e0e0e;
+  --color-default-inner: #ffffff;
+
+  --color-calendar-border: #2a2a2a;
+  --color-modal-background: #1c1c1c;
+  --color-modal-backdrop: rgba(2, 6, 12, 0.5);
+
+  --color-toggler-background: #000000;
+  --color-toggler-active: #1f1f1f;
+  --color-toggler-inner: #ffffff;
+
+  --color-error: #ff6b6b;
+  --color-skeleton: rgba(255, 254, 254, 0.06);
+
+  --color-mobilebar-background: #000000f2;
+  --color-mobilebar-active: #1f1f1f;
+
+  --color-badge-background: #8b89ff;
+  --color-badge-inner: #0b0f14;
+
+  --background-gradient:
+    linear-gradient(rgba(80, 80, 80, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 80, 80, 0.07) 1px, transparent 1px), #141414;
+
+  --practice-item-border: #2ecc71;
+  --lecture-item-border: #9b59b6;
+  --lab-item-border: #3498db;
+
+  --practice-item-background: #2ecc705b;
+  --lecture-item-background: #9c59b65a;
+  --lab-item-background: #3498db47;
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-inner: var(--color-inner);
+  --color-border: var(--color-border);
+  --color-muted: var(--color-muted);
+  --color-selected: var(--color-selected);
+  --color-divider: var(--color-divider);
+  --color-foreground: var(--color-foreground);
+  --color-primary-background: var(--color-primary-background);
+  --color-primary-inner: var(--color-primary-inner);
+  --color-default-background: var(--color-default-background);
+  --color-default-inner: var(--color-default-inner);
+  --color-input-background: var(--color-input-background);
+  --color-input-inner: var(--color-input-inner);
+  --color-calendar-border: var(--color-calendar-border);
+  --color-error: var(--color-error);
+  --color-skeleton: var(--color-skeleton);
+  --color-modal-background: var(--color-modal-background);
+  --color-modal-backdrop: var(--color-modal-backdrop);
+
+  --color-toggler-background: var(--color-toggler-background);
+  --color-toggler-active: var(--color-toggler-active);
+  --color-toggler-inner: var(--color-toggler-inner);
+
+  --color-mobilebar-background: var(--color-mobilebar-background);
+  --color-mobilebar-active: var(--color-mobilebar-active);
+
+  --color-badge-background: var(--color-badge-background);
+  --color-badge-inner: var(--color-badge-inner);
+}
+
+body {
+  background: var(--background-gradient);
+  background-size:
+    50px 50px,
+    50px 50px,
+    100% 100%;
+  background-attachment: fixed, fixed, scroll;
+
+  color: var(--color-inner);
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  /* @media (max-width: 768px) {
+    font-size: 14px;
+  } */
+}
+
+.card {
+  @apply bg-secondary py-4 px-6 border-2 border-border rounded-sm min-w-[310px];
+}
+
+.darkBack {
+  background-color: rgba(52, 52, 52, 0.7);
+}
+
+.slide {
+  animation: slideAnim 0.5s;
+}
+
+.anim-hover {
+  @apply hover:shadow-sm transition-all duration-300;
+}
+
+@keyframes slideAnim {
+  from {
+    transform: translateX(50px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.lecture {
+  background-color: var(--lecture-item-background);
+  border-left: 4px solid var(--lecture-item-border);
+}
+
+.practice {
+  background-color: var(--practice-item-background);
+  border-left: 4px solid var(--practice-item-border);
+}
+
+.lab {
+  background-color: var(--lab-item-background);
+  border-left: 4px solid var(--lab-item-border);
+}
