@@ -1,6 +1,7 @@
-import { cn } from "@/utils/cn";
-import { forwardRef, SelectHTMLAttributes, useState } from "react";
+
+import { forwardRef, useState, type SelectHTMLAttributes } from "react";
 import { ChevronDown } from "lucide-react";
+import { cn } from "../../utils/cn";
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   name: string;

@@ -1,6 +1,7 @@
-import { cn } from "@/utils/cn";
+
 import { ChevronDown, X } from "lucide-react";
-import { forwardRef, useState, useRef, useEffect, KeyboardEvent } from "react";
+import { forwardRef, useState, useRef, useEffect, type KeyboardEvent } from "react";
+import { cn } from "../../utils/cn";
 
 interface AutoCompleteProps {
   name: string;

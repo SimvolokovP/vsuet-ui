@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { useState, type PropsWithChildren } from "react";
 
 interface TooltipProps {
   title?: string;

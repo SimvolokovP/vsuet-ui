@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn";
-import { HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
+import { cn } from "../../utils/cn";
+
 
 export function Skeleton({
   className,

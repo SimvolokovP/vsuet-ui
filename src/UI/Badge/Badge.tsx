@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
+import { cn } from "../../utils/cn";
+
 
 interface BadgeProps {
   className?: string;

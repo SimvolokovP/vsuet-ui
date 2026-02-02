@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Modal } from './Modal';
 import { fn } from "storybook/test";
-import { Button } from './Button/Button';
-import { Input } from './Input';
+import { Button } from '../Button/Button';
+import { Input } from '../Input/Input';
+import { Modal } from './Modal';
 
 const meta: Meta<typeof Modal> = {
-  title: 'Components/Modal',
+  title: 'UI/Modal',
   component: Modal,
   tags: ['autodocs'],
   parameters: {

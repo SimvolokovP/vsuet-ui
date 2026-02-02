@@ -2,8 +2,8 @@
 
 import { useEffect, type ReactNode } from "react";
 import { X } from "lucide-react";
-import { cn } from "../utils/cn";
-import { Button } from "./Button/Button";
+import { cn } from "../../utils/cn";
+import { Button } from "../Button/Button";
 
 interface ModalProps {
   isOpen: boolean;
